@@ -1,0 +1,51 @@
+.c-icon {
+  text-align: center;
+  padding: 0px 20px;
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      transform: scale(1.2);
+      transition: all 0.5s ease-in-out 0s;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--small {
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &--white {
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &--rotate {
+    &:hover {
+
+      path{
+        @extend %rotate;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

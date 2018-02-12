@@ -1,0 +1,31 @@
+$areas: welcome menu about skills experience education footer;
+
+@each $area in $areas  {
+  div[class*='--area-#{$area}'] {
+    grid-area: $area;
+  }
+}
+
+.l-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'menu'
+    'welcome'
+    'about'
+    'skills'
+    'experience'
+    'education';
+
+  @include bp($md) {
+    background: url("../images/linkedIn.jpg") center;
+    padding: 30px;
+    grid-template-columns: 280px 1fr 80px;
+    grid-gap: 20px 20px;
+    grid-template-areas:
+    'welcome about menu'
+    '. skills .'
+    '. experience .'
+    '. education .';
+  }
+}

@@ -1,0 +1,54 @@
+%clean-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin bp($map) {
+  $query: "";
+  @if map-has-key($map, min) {
+    $query: append($query, "(min-width: #{map-get($map, min)})");
+  }
+  @if map-has-key($map, min) and map-has-key($map, max) {
+    $query: append($query, "and");
+  }
+  @if map-has-key($map, max) {
+    $query: append($query, "(max-width: #{map-get($map, max)})");
+  }
+  @media screen and #{$query} {
+    @content;
+  }
+}
+
+@mixin triangle($size, $color, $direction) {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size;
+
+  @if $direction == up {
+    border-bottom-color: $color;
+  }
+  @else if $direction == right {
+    border-left-color: $color;
+  }
+  @else if $direction == down {
+    border-top-color: $color;
+  }
+  @else if $direction == left {
+    border-right-color: $color;
+  }
+}
+
+%rotate {
+  animation-name: rotate;
+  animation-duration: .3s;
+  transform-origin: 50% 50%;
+}
+

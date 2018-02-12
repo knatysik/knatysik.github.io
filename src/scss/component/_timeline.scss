@@ -1,0 +1,95 @@
+$triangle: 12.5px;
+
+.c-timeline {
+  padding: 15px;
+  background: $white;
+
+  &__wrap {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      bottom: 0;
+      content: '';
+      width: 2px;
+      background: $blue;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 25px;
+      left: -2px;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $brown;
+    }
+
+    &:last-child {
+
+      &:after {
+        top: 31px;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        content: '';
+        position: absolute;
+        background: $white;
+      }
+    }
+
+    @include bp($sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__interval {
+    width: 130px;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    background: $blue;
+    position: relative;
+    margin: 0 0 0 $triangle;
+
+    &:before {
+      @include triangle($triangle, $blue, left);
+      left: -$triangle*2;
+    }
+
+    @include bp($sm) {
+      margin: 0;
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        @include triangle($triangle, $blue, right);
+      }
+    }
+  }
+
+  &__work {
+    margin-left: $triangle;
+    margin-top: 15px;
+
+    @include bp($sm) {
+      padding-left: 50px;
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-top: 5px;
+    }
+  }
+}

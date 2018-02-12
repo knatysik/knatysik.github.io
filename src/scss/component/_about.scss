@@ -1,0 +1,10 @@
+.c-about {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: $white;
+
+  &__name {
+    font-weight: 600;
+  }
+}

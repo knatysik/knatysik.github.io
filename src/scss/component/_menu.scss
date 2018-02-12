@@ -1,0 +1,16 @@
+.c_menu {
+  background: $grey;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+
+  i {
+    margin: 10px;
+  }
+
+  @include bp($md) {
+    flex-direction: column;
+    position: fixed;
+    background: $white;
+  }
+}

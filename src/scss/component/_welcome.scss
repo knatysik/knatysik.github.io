@@ -1,0 +1,66 @@
+.c-welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: $white;
+
+  &__wrapper {
+    background: $blue;
+    padding: 30px 15px;
+  }
+
+  &__download {
+    background: $white;
+    padding: 30px;
+  }
+
+  &__picture {
+    background: url("../images/NatMihKr-2.png") no-repeat center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+
+    &:hover {
+      background-image: url("../images/NatMihKr-1.png");
+      transition: all 0.5s ease-in-out 0s;
+    }
+  }
+
+  &__info {
+    h1 {
+      color: white;
+    }
+  }
+
+  &__kontakt {
+    display: flex;
+    justify-content: center;
+
+    a {
+      //transition: all 0.5s ease-in-out 0s;
+    }
+  }
+
+  &__download-cv {
+    text-transform: uppercase;
+    color: $white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: $blue;
+    display: block;
+    width: max-content;
+    margin: auto;
+
+    &:hover {
+      //transition: all 0.5s ease-in-out 0s;
+    }
+  }
+
+  @include bp($md) {
+    position: fixed;
+  }
+}
+
