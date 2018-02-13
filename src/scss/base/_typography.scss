@@ -1,15 +1,28 @@
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 h2, h3 {
   text-transform: uppercase;
 }
 
-
 h4 {
-  color: $brown;
   font-weight: 600;
   font-size: 18px;
-}
-
-h5 {
-  color: $vinous;
-
+  margin: 5px 0;
 }

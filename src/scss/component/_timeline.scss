@@ -1,4 +1,4 @@
-$triangle: 12.5px;
+$triangle: 14px;
 
 .c-timeline {
   padding: 15px;
@@ -14,7 +14,7 @@ $triangle: 12.5px;
       bottom: 0;
       content: '';
       width: 2px;
-      background: $blue;
+      background: $bg;
     }
   }
 
@@ -32,7 +32,7 @@ $triangle: 12.5px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: $brown;
+      background: $colorText;
     }
 
     &:last-child {
@@ -54,10 +54,11 @@ $triangle: 12.5px;
   }
 
   &__interval {
-    width: 130px;
-    box-sizing: content-box;
+    width: 150px;
+    height: 28px;
+    box-sizing: border-box;
     padding: 5px 10px;
-    background: $blue;
+    background: linear-gradient(to right, $blue, $green);
     position: relative;
     margin: 0 0 0 $triangle;
 
@@ -68,6 +69,7 @@ $triangle: 12.5px;
 
     @include bp($sm) {
       margin: 0;
+      background: linear-gradient(to right, $green, $blue);
 
       &:before {
         display: none;
@@ -90,6 +92,11 @@ $triangle: 12.5px;
 
     h3 {
       margin-top: 5px;
+      color: $colorText;
+    }
+
+    h4 {
+      color: $bg;
     }
   }
 }

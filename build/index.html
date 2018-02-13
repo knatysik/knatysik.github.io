@@ -7,15 +7,16 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>CV - Kriuchok Natalia</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800|Raleway:300,400,700,900" rel="stylesheet">
 </head>
 <body>
     <div class="l-grid">
         <div class="l-grid__item l-grid__item--area-menu">
-            <div class="c_menu">
-                <a href="#about"><i class="fa fa-female fa-2x"></i></a>
-                <a href="#skills"><i class="fa fa-certificate fa-2x"></i></a>
-                <a href="#experience"><i class="fa fa-briefcase fa-2x"></i></a>
-                <a href="#education"><i class="fa fa-mortar-board fa-2x"></i></a>
+            <div class="c_menu" id="menu">
+                <a href="#about-section">about</a>
+                <a href="#skills-section">skills</a>
+                <a href="#experience-section">experience</a>
+                <a href="#education-section">education</a>
             </div>
         </div>
         <div class="l-grid__item l-grid__item--area-welcome">
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="l-grid__item l-grid__item--area-about">
+        <section class="l-grid__item l-grid__item--area-about" id="about-section">
             <div class="c-about" id="about">
                 <h2>O mnie</h2>
                 <h4 class="c-about__name">Witam, nazywam się Natalia Kriuchok</h4>
@@ -104,27 +105,27 @@
                     Scroll down to learn a little bit more about me.
                 </p>
             </div>
-        </div>
-        <div class="l-grid__item l-grid__item--area-skills">
+        </section>
+        <section class="l-grid__item l-grid__item--area-skills" id="skills-section">
             <div class="c-skills">
                 <h2>Moje umiejętności</h2>
                 <div class="c-skills__wrap" id="skills"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="l-grid__item l-grid__item--area-experience">
+        <section class="l-grid__item l-grid__item--area-experience" id="experience-section">
             <div class="c-timeline">
                 <h2>Doświadczenie zawodowe</h2>
                 <div class="c-timeline__wrap" id="experience"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="l-grid__item l-grid__item--area-education">
+        <section class="l-grid__item l-grid__item--area-education" id="education-section">
             <div class="c-timeline">
                 <h2>Edukacja</h2>
                 <div class="c-timeline__wrap" id="education"></div>
             </div>
-        </div>
+        </section>
     </div>
 
     <script src="js/main.js"></script>

@@ -21,14 +21,14 @@
     flex-direction: row;
 
     div {
-      border: 2px solid $blue;
+      border: 2px solid $bg;
       border-radius: 50%;
       width: 6px;
       height: 6px;
       margin-right: 3px;
     }
     .fill {
-      background: $blue;
+      background: $bg;
     }
   }
 }

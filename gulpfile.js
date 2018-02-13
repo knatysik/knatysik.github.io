@@ -1,13 +1,13 @@
 'use strict'
 
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var sourcemaps = require('gulp-sourcemaps')
-var connect = require('gulp-connect')
-var autoprefixer = require('gulp-autoprefixer')
-var imagemin = require('gulp-imagemin')
-var rimraf = require('rimraf')
-var concatCss = require('gulp-concat-css')
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const connect = require('gulp-connect')
+const autoprefixer = require('gulp-autoprefixer')
+const imagemin = require('gulp-imagemin')
+const rimraf = require('rimraf')
+const concat = require('gulp-concat')
 
 gulp.task('default', ['build', 'server', 'watch'])
 
@@ -35,7 +35,6 @@ gulp.task('sass', function() {
         cascade: false,
       })
     )
-    .pipe(concatCss('main.css', { rebaseUrls: false }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./build/css/'))
     .pipe(connect.reload())
@@ -56,8 +55,13 @@ gulp.task('html', function() {
 
 gulp.task('js', function() {
   gulp
-    .src('./src/js/*.js')
-    .pipe(gulp.dest('./build/js'))
+    .src([
+      './node_modules/jquery/dist/jquery.min.js',
+      './src/js/vendor/*.js',
+      './src/js/*.js',
+    ])
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./build/js/'))
     .pipe(connect.reload())
 })
 

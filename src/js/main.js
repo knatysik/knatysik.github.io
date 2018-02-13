@@ -1,10 +1,13 @@
-/**
- * Created by natusya on 11.02.18.
- */
 ;(function() {
   const skillsElement = document.getElementById('skills')
   const experienceElement = document.getElementById('experience')
   const educationElement = document.getElementById('education')
+  const menuElements = document.querySelectorAll('#menu > a')
+  menuElements.forEach(function(el) {
+    el.addEventListener('click', function(event) {
+      event.target.className += ' active'
+    })
+  })
   const skills = {
     'HTML/HTML5': 6,
     'CSS/CSS3': 6,

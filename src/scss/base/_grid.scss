@@ -1,7 +1,7 @@
 $areas: welcome menu about skills experience education footer;
 
 @each $area in $areas  {
-  div[class*='--area-#{$area}'] {
+  div[class*='--area-#{$area}'], section[class*='--area-#{$area}'] {
     grid-area: $area;
   }
 }
@@ -18,9 +18,11 @@ $areas: welcome menu about skills experience education footer;
     'education';
 
   @include bp($md) {
-    background: url("../images/linkedIn.jpg") center;
+    background: url("../images/linkedIn.jpg") center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     padding: 30px;
-    grid-template-columns: 280px 1fr 80px;
+    grid-template-columns: 280px 1fr 68px;
     grid-gap: 20px 20px;
     grid-template-areas:
     'welcome about menu'

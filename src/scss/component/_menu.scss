@@ -3,14 +3,29 @@
   padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   i {
     margin: 10px;
+    color: $colorText;
+
+    &:hover {
+      color: $black;
+    }
+
+    &.active {
+      color: $bg;
+    }
+
+    @include bp($md) {
+    }
   }
 
   @include bp($md) {
     flex-direction: column;
     position: fixed;
+    width: 68px;
+    box-sizing: border-box;
     background: $white;
   }
 }

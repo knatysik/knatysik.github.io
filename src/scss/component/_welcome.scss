@@ -5,8 +5,14 @@
   background: $white;
 
   &__wrapper {
-    background: $blue;
+    //background: $blue;
+    background: linear-gradient($green, $blue);
     padding: 30px 15px;
+
+    @include bp($md) {
+      width: 280px;
+      box-sizing: border-box;
+    }
   }
 
   &__download {
@@ -31,7 +37,12 @@
 
   &__info {
     h1 {
-      color: white;
+      color: white;   
+    }
+
+    h4 {
+      margin: 5px 0 20px;
+      color: $colorText;
     }
   }
 
@@ -49,14 +60,10 @@
     color: $white;
     padding: 15px 30px;
     border-radius: 30px;
-    background: $blue;
+    background: $bg;
     display: block;
     width: max-content;
     margin: auto;
-
-    &:hover {
-      //transition: all 0.5s ease-in-out 0s;
-    }
   }
 
   @include bp($md) {
