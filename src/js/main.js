@@ -1,13 +1,7 @@
 ;(function() {
   const skillsElement = document.getElementById('skills')
-  const experienceElement = document.getElementById('experience')
+  const jobElement = document.getElementById('job')
   const educationElement = document.getElementById('education')
-  const menuElements = document.querySelectorAll('#menu > a')
-  menuElements.forEach(function(el) {
-    el.addEventListener('click', function(event) {
-      event.target.className += ' active'
-    })
-  })
   const skills = {
     'HTML/HTML5': 6,
     'CSS/CSS3': 6,
@@ -19,7 +13,7 @@
     Git: 5,
     Gulp: 4,
   }
-  const experience = [
+  const jobs = [
     {
       year: 'paź 2012 – kwi 2014',
       place: 'Webimperia',
@@ -107,6 +101,6 @@
 
   renderSkills(skills)
 
-  experienceElement.insertAdjacentHTML('beforeend', renderTimeline(experience))
+  jobElement.insertAdjacentHTML('beforeend', renderTimeline(jobs))
   educationElement.insertAdjacentHTML('beforeend', renderTimeline(education))
 })()

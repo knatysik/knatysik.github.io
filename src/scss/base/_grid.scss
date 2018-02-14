@@ -1,4 +1,4 @@
-$areas: welcome menu about skills experience education footer;
+$areas: welcome menu about skills job education portfolio contact;
 
 @each $area in $areas  {
   div[class*='--area-#{$area}'], section[class*='--area-#{$area}'] {
@@ -14,8 +14,10 @@ $areas: welcome menu about skills experience education footer;
     'welcome'
     'about'
     'skills'
-    'experience'
-    'education';
+    'job'
+    'education'
+    'portfolio'
+    'contact';
 
   @include bp($md) {
     background: url("../images/linkedIn.jpg") center no-repeat;
@@ -27,7 +29,9 @@ $areas: welcome menu about skills experience education footer;
     grid-template-areas:
     'welcome about menu'
     '. skills .'
-    '. experience .'
-    '. education .';
+    '. job .'
+    '. education .'
+    '. portfolio .'
+    '. contact .';
   }
 }

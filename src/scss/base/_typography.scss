@@ -1,28 +1,26 @@
 h1 {
-  font-family: 'Raleway', sans-serif;
+  //font-family: 'Raleway', sans-serif;
 }
-
-h2 {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 300;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  //font-family: 'Montserrat', sans-serif;
+  font-family: 'BrandonGrotesque-Medium', sans-serif;
 }
 
 h2, h3 {
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 
 h4 {
   font-weight: 600;
   font-size: 18px;
   margin: 5px 0;
+}
+
+p {
+  text-indent: 30px;
 }

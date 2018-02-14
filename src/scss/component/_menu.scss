@@ -1,3 +1,7 @@
+$menu-pictures: about, skills, job, education, portfolio, contact;
+
+
+
 .c_menu {
   background: $grey;
   padding: 10px;
@@ -5,20 +9,20 @@
   justify-content: center;
   align-items: center;
 
-  i {
+  a {
+    width: 30px;
+    height: 30px;
     margin: 10px;
-    color: $colorText;
+  }
 
-    &:hover {
-      color: $black;
-    }
+  @each $menu-name in $menu-pictures {
+      a[href*="#{$menu-name}"] {
+          background: url("../images/#{$menu-name}-1.svg") no-repeat center;
 
-    &.active {
-      color: $bg;
-    }
-
-    @include bp($md) {
-    }
+          &:hover, &.active {
+            background-image: url("../images/#{$menu-name}-2.svg");
+          }
+      }
   }
 
   @include bp($md) {

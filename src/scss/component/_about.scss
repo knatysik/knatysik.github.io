@@ -1,10 +1,13 @@
 .c-about {
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  background: $white;
 
   &__name {
     font-weight: 600;
+  }
+
+  .jj {
+    background: url(https://media.giphy.com/media/AkQBFi3fMm2QM/giphy.gif) no-repeat center right;
+    background-size: contain;
   }
 }
