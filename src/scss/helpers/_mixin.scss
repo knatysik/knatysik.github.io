@@ -1,9 +1,3 @@
-%clean-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 @mixin bp($map) {
   $query: "";
   @if map-has-key($map, min) {
@@ -20,35 +14,17 @@
   }
 }
 
-@mixin triangle($size, $color, $direction) {
+@mixin button {
+  color: $white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: $bg;
   display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 100%;
-  height: 0;
-  width: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: $size;
+  width: max-content;
 
-  @if $direction == up {
-    border-bottom-color: $color;
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background: darken($bg, 5%);
   }
-  @else if $direction == right {
-    border-left-color: $color;
-  }
-  @else if $direction == down {
-    border-top-color: $color;
-  }
-  @else if $direction == left {
-    border-right-color: $color;
-  }
-}
-
-%rotate {
-  animation-name: rotate;
-  animation-duration: .3s;
-  transform-origin: 50% 50%;
 }
 

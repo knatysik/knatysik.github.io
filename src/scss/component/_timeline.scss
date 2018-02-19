@@ -1,4 +1,5 @@
-$triangle: 14px;
+$triangle-width: 10px;
+$width-year: 150px;
 
 .c-timeline {
 
@@ -13,6 +14,13 @@ $triangle: 14px;
       content: '';
       width: 2px;
       background: $bg;
+    }
+
+    @include bp($sm) {
+
+      &:before {
+        left: $width-year + 40px;
+      }
     }
   }
 
@@ -48,40 +56,60 @@ $triangle: 14px;
 
     @include bp($sm) {
       flex-direction: row;
+
+      &:before {
+        left: $width-year + 38px;
+      }
+
+      &:last-child {
+
+        &:after {
+          left: $width-year + 40px;
+        }
+      }
     }
   }
 
-  &__interval {
-    width: 150px;
+  &__year {
+    width: $width-year;
     height: 28px;
-    box-sizing: border-box;
-    padding: 5px 10px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 0 10px;
     background: linear-gradient(to right, $blue, $green);
     position: relative;
-    margin: 0 0 0 $triangle;
+    margin: 0 0 0 $triangle-width;
 
     &:before {
-      @include triangle($triangle, $blue, left);
-      left: -$triangle*2;
+      display: block;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      left: -$triangle-width;
+      border-width: 14px $triangle-width 14px 0;
+      border-color: transparent $blue transparent transparent;
     }
 
     @include bp($sm) {
+      flex: 0 0 $width-year;
       margin: 0;
       background: linear-gradient(to right, $green, $blue);
 
       &:before {
-        display: none;
-      }
-
-      &:after {
-        @include triangle($triangle, $blue, right);
+        left: 100%;
+        border-width: 14px 0 14px $triangle-width;
+        border-color: transparent transparent transparent $blue;
       }
     }
   }
 
   &__work {
-    margin-left: $triangle;
+    margin-left: $triangle-width;
     margin-top: 15px;
+
+    //width: calc(100% - #{$width-year});
 
     @include bp($sm) {
       padding-left: 50px;
@@ -90,7 +118,6 @@ $triangle: 14px;
 
     h3 {
       margin-top: 5px;
-      //color: $colorText;
     }
 
     h4 {

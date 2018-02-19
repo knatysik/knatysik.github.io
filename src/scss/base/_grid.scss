@@ -20,7 +20,7 @@ $areas: welcome menu about skills job education portfolio contact;
     'contact';
 
   @include bp($md) {
-    background: url("../images/linkedIn.jpg") center no-repeat;
+    background: url("../assets/images/bg.jpg") center no-repeat;
     background-attachment: fixed;
     background-size: cover;
     padding: 30px;
@@ -33,5 +33,9 @@ $areas: welcome menu about skills job education portfolio contact;
     '. education .'
     '. portfolio .'
     '. contact .';
+  }
+
+  &__item {
+    overflow: hidden;
   }
 }

@@ -1,0 +1,93 @@
+.c-contact {
+
+  &__wrap {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @include bp($sm) {
+      flex-direction: row;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    button {
+      @include button;
+      border: none;
+      cursor: pointer;
+    }
+
+    textarea {
+      min-height: 60px;
+    }
+  }
+
+  &__relations {
+
+    @include bp($xs) {
+      flex: 1 0 50%;
+      margin-right: 20px;
+    }
+  }
+
+  .google-map {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+
+    @include bp($sm) {
+      margin-top: 0;
+    }
+  }
+
+  #small-map {
+    display: none;
+  }
+
+  @include bp($sm) {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      background: url("../assets/images/planet.svg") $bg;
+      background-size: cover;
+      top: 85px;
+      right: 15px;
+      width: 60px;
+      height: 180px;
+      border-radius: 5px;
+      z-index: 0;
+    }
+
+    button {
+      width: auto;
+      position: relative;
+
+      .progress {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background: red;
+        left: 0;
+      }
+
+      &:disabled {
+        opacity: .5;
+      }
+    }
+
+    #small-map {
+      display: block;
+    }
+
+    #big-map {
+      display: none;
+    }
+  }
+}

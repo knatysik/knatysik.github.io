@@ -1,13 +1,14 @@
 $menu-pictures: about, skills, job, education, portfolio, contact;
 
-
-
 .c_menu {
   background: $grey;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 
   a {
     width: 30px;
@@ -17,10 +18,10 @@ $menu-pictures: about, skills, job, education, portfolio, contact;
 
   @each $menu-name in $menu-pictures {
       a[href*="#{$menu-name}"] {
-          background: url("../images/#{$menu-name}-1.svg") no-repeat center;
+          background: url("../assets/images/#{$menu-name}-1.svg") no-repeat center;
 
           &:hover, &.active {
-            background-image: url("../images/#{$menu-name}-2.svg");
+            background-image: url("../assets/images/#{$menu-name}-2.svg");
           }
       }
   }

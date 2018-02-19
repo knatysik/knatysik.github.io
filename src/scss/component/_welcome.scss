@@ -4,14 +4,18 @@
   text-align: center;
   background: $white;
 
+  margin-top: 70px;
+
+  @include bp($md) {
+    margin-top: 0;
+  }
+
   &__wrapper {
-    //background: $blue;
     background: linear-gradient($green, $blue);
     padding: 30px 15px;
 
     @include bp($md) {
       width: 280px;
-      box-sizing: border-box;
     }
   }
 
@@ -21,48 +25,38 @@
   }
 
   &__picture {
-    background: url("../images/NatMihKr-2.png") no-repeat center;
+    background: url("../assets/images/NatMihKr-2.png") no-repeat center;
     background-size: cover;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     cursor: pointer;
     margin: auto;
+    transition: background-image 0.5s ease-in-out;
 
     &:hover {
-      background-image: url("../images/NatMihKr-1.png");
-      transition: all 0.5s ease-in-out 0s;
+      background-image: url("../assets/images/NatMihKr-1.png");
     }
   }
 
   &__info {
     h1 {
-      color: white;   
+      color: white;
+      margin: 5px 0;
+
+      @include bp($md) {
+        font-size: 24px;
+      }
     }
 
     h4 {
-      margin: 5px 0 20px;
-      color: $colorText;
-    }
-  }
-
-  &__kontakt {
-    display: flex;
-    justify-content: center;
-
-    a {
-      //transition: all 0.5s ease-in-out 0s;
+      color: $black;
+      font-weight: 300;
     }
   }
 
   &__download-cv {
-    text-transform: uppercase;
-    color: $white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    background: $bg;
-    display: block;
-    width: max-content;
+    @include button;
     margin: auto;
   }
 

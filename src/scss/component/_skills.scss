@@ -24,6 +24,7 @@
       width: 6px;
       height: 6px;
       margin-right: 3px;
+      box-sizing: content-box;
     }
     .fill {
       background: $bg;

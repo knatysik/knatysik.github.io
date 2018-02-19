@@ -11,7 +11,7 @@ const concat = require('gulp-concat')
 
 gulp.task('default', ['build', 'server', 'watch'])
 
-gulp.task('build', ['sass', 'html', 'js', 'image', 'fonts'])
+gulp.task('build', ['sass', 'html', 'js', 'assets', 'fonts'])
 
 gulp.task('clean', function(cb) {
   rimraf('./build', cb)
@@ -65,11 +65,11 @@ gulp.task('js', function() {
     .pipe(connect.reload())
 })
 
-gulp.task('image', function() {
+gulp.task('assets', function() {
   gulp
-    .src('./src/images/**/*')
+    .src('./src/assets/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./build/images'))
+    .pipe(gulp.dest('./build/assets/'))
 })
 
 gulp.task('fonts', function() {
