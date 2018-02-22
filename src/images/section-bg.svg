@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" xml:space="preserve">
+	<g class="g-circles" fill="none" stroke-width="15" style="opacity: .05;">
+		<circle r="40" cx="60" cy="60" stroke="crimson" stroke-opacity=".3"></circle>
+		<circle r="55" cx="130" cy="100" stroke="orangered" stroke-opacity=".5"></circle>
+		<circle r="40" cx="190" cy="140" stroke="gold" stroke-opacity=".35"></circle>
+<circle r="50" cx="70" cy="170" stroke="blue" stroke-opacity=".25"></circle>
+	</g>
+</svg>

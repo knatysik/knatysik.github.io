@@ -2,17 +2,18 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: $white;
-
-  margin-top: 70px;
+  background: $gradient-1;
+  background: linear-gradient(135deg, $gradient-1 0%, $gradient-2 100%);
 
   @include bp($md) {
     margin-top: 0;
   }
 
   &__wrapper {
-    background: linear-gradient($green, $blue);
-    padding: 30px 15px;
+    padding: 40px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include bp($md) {
       width: 280px;
@@ -20,44 +21,60 @@
   }
 
   &__download {
-    background: $white;
+    background: rgba(65, 90, 173, 0.15);
     padding: 30px;
   }
 
   &__picture {
-    background: url("../assets/images/NatMihKr-2.png") no-repeat center;
+    background: url("../images/NatMihKr-1.png") repeat-y center;
     background-size: cover;
-    width: 250px;
-    height: 250px;
+    box-shadow: 0 0 0 23px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.2);
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     cursor: pointer;
-    margin: auto;
     transition: background-image 0.5s ease-in-out;
 
     &:hover {
-      background-image: url("../assets/images/NatMihKr-1.png");
+      background-image: url("../images/NatMihKr-2.png");
     }
   }
 
   &__info {
+    margin-top: 25px;
+
     h1 {
       color: white;
       margin: 5px 0;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
 
-      @include bp($md) {
-        font-size: 24px;
-      }
+  &__position {
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 0;
+
+    &:after, &:before {
+      @include border-line();
     }
 
-    h4 {
-      color: $black;
-      font-weight: 300;
+    &:before {
+      bottom: 0;
+      top: auto;
     }
   }
 
   &__download-cv {
     @include button;
     margin: auto;
+
+    &:hover {
+      background: $gradient-button-2;
+    }
   }
 
   @include bp($md) {

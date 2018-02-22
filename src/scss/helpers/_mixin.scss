@@ -17,14 +17,25 @@
 @mixin button {
   color: $white;
   padding: 10px 30px;
-  border-radius: 5px;
-  background: $bg;
+  background: $gradient-button-1;
+  background: linear-gradient(to left, $gradient-button-2, $gradient-button-1);
+  border-radius: 30px;
+  font-weight: 300;
   display: block;
   width: max-content;
+  transition: backgraund 0.3s ease-in-out;
+}
 
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    background: darken($bg, 5%);
-  }
+@mixin border-line($width: 30px) {
+  position: absolute;
+  display: block;
+  content: '';
+  width: $width;
+  height: 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $white;
 }
 

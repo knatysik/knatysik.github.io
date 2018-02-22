@@ -3,8 +3,6 @@ function getRelatedContent(el) {
   return $($(el).attr('href'))
 }
 
-
-
 $('#menu a').on('click', function(e) {
   e.preventDefault()
   $('html,body').animate({
@@ -26,6 +24,7 @@ $('section')
     if (direction === 'up') return
     $('.c_menu a').removeClass('active')
     $('.c_menu a[href="#'+this.element.id+'"]').addClass('active')
+
     if (this.element.id === 'contact-section') {
       $(this.element).find('input').first().focus()
     }

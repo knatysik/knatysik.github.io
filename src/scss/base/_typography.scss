@@ -1,28 +1,42 @@
+$fonts-weight: 300, 500, 700;
+
+@each $fonts-type in $fonts-weight {
+  @font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-#{$fonts-type}.eot');
+    src: url('../fonts/BrandonGrotesque-#{$fonts-type}.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BrandonGrotesque-#{$fonts-type}.woff') format('woff'),
+    url('../fonts/BrandonGrotesque-#{$fonts-type}.ttf') format('truetype'),
+    url('../fonts/BrandonGrotesque-#{$fonts-type}.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: $fonts-type;
+  }
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
 h1 {
-  //font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 300;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  //font-family: 'Montserrat', sans-serif;
-  font-family: 'BrandonGrotesque-Medium', sans-serif;
-}
-
-h2, h3 {
-  //text-transform: uppercase;
+  font-family: 'Brandon Grotesque', sans-serif;
 }
 
 h4 {
   font-weight: 600;
   font-size: 18px;
   margin: 5px 0;
-}
-
-p {
-  text-indent: 30px;
 }

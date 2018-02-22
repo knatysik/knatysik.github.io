@@ -1,5 +1,5 @@
 $triangle-width: 10px;
-$width-year: 150px;
+$width-year: 130px;
 
 .c-timeline {
 
@@ -38,7 +38,7 @@ $width-year: 150px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: $colorText;
+      background: $gradient-button-2;
     }
 
     &:last-child {
@@ -71,14 +71,15 @@ $width-year: 150px;
   }
 
   &__year {
-    width: $width-year;
     height: 28px;
-    line-height: 28px;
-    font-size: 14px;
+    line-height: 30px;
+    font-size: 13px;
     padding: 0 10px;
-    background: linear-gradient(to right, $blue, $green);
+    background: $gradient-1;
+    color: $white;
     position: relative;
     margin: 0 0 0 $triangle-width;
+    width: $width-year;
 
     &:before {
       display: block;
@@ -89,18 +90,17 @@ $width-year: 150px;
       border-style: solid;
       left: -$triangle-width;
       border-width: 14px $triangle-width 14px 0;
-      border-color: transparent $blue transparent transparent;
+      border-color: transparent $gradient-1 transparent transparent;
     }
 
     @include bp($sm) {
       flex: 0 0 $width-year;
       margin: 0;
-      background: linear-gradient(to right, $green, $blue);
 
       &:before {
         left: 100%;
         border-width: 14px 0 14px $triangle-width;
-        border-color: transparent transparent transparent $blue;
+        border-color: transparent transparent transparent $gradient-1;
       }
     }
   }
@@ -109,19 +109,22 @@ $width-year: 150px;
     margin-left: $triangle-width;
     margin-top: 15px;
 
-    //width: calc(100% - #{$width-year});
-
     @include bp($sm) {
       padding-left: 50px;
-      margin-top: 0;
+      margin-top: -15px;
     }
+  }
 
-    h3 {
-      margin-top: 5px;
-    }
+  &__place {
+      margin-bottom: 5px;
+      line-height: 18px;
+  }
 
-    h4 {
-      color: $bg;
-    }
+  &__position {
+    color: $box-border;
+  }
+
+  &__responsibility {
+    margin-top: 10px;
   }
 }

@@ -1,93 +1,73 @@
 .c-contact {
 
-  &__wrap {
-    overflow: hidden;
+  &__form {
     display: flex;
     flex-direction: column;
-
-    @include bp($sm) {
-      flex-direction: row;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
-
-    button {
-      @include button;
-      border: none;
-      cursor: pointer;
-    }
-
-    textarea {
-      min-height: 60px;
-    }
   }
 
-  &__relations {
-
-    @include bp($xs) {
-      flex: 1 0 50%;
-      margin-right: 20px;
-    }
-  }
-
-  .google-map {
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
     position: relative;
-    z-index: 1;
-    margin-top: 20px;
-
-    @include bp($sm) {
-      margin-top: 0;
-    }
   }
 
-  #small-map {
-    display: none;
+  &__overlay {
+    height: 2px;
+    background-color: $gradient-button-2;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .3s ease-out;
   }
 
-  @include bp($sm) {
+  input:focus + &__overlay, textarea:focus + &__overlay {
+    width: 100%;
+  }
+
+  &__submit {
+    @include button;
+    background: $gradient-1;
+    background: linear-gradient(135deg, $gradient-1 0%, $gradient-2 100%);
+    width: 120px;
+    border: none;
+    margin: 15px 0;
+    line-height: 1.6;
+    cursor: pointer;
+    align-self: flex-end;
     position: relative;
+    overflow: hidden;
 
-    &:after {
+    &:hover {
+      background: $gradient-2;
+    }
+
+    .progress {
       position: absolute;
-      content: '';
-      background: url("../assets/images/planet.svg") $bg;
-      background-size: cover;
-      top: 85px;
-      right: 15px;
-      width: 60px;
-      height: 180px;
-      border-radius: 5px;
-      z-index: 0;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $gradient-button-2;
     }
 
-    button {
-      width: auto;
+    .button-text {
       position: relative;
+      z-index: 1;
+    }
+
+    &:disabled {
+      opacity: .5;
+    }
+
+    &.error {
+      background: #f00;
 
       .progress {
-        position: absolute;
-        bottom: 0;
-        width: 0;
-        height: 3px;
-        background: red;
-        left: 0;
+        display: none;
       }
-
-      &:disabled {
-        opacity: .5;
-      }
-    }
-
-    #small-map {
-      display: block;
-    }
-
-    #big-map {
-      display: none;
     }
   }
 }

@@ -1,20 +1,19 @@
 'use strict'
 
 const gulp = require('gulp')
+const del = require('del')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const connect = require('gulp-connect')
 const autoprefixer = require('gulp-autoprefixer')
 const imagemin = require('gulp-imagemin')
-const rimraf = require('rimraf')
 const concat = require('gulp-concat')
 
-gulp.task('default', ['build', 'server', 'watch'])
+gulp.task('default', ['clean','build', 'server', 'watch'])
 
-gulp.task('build', ['sass', 'html', 'js', 'assets', 'fonts'])
-
-gulp.task('clean', function(cb) {
-  rimraf('./build', cb)
+gulp.task('build', ['sass', 'html', 'js', 'images', 'fonts'])
+gulp.task('clean', function () {
+  return del(['./public/images/**', '!./public/images'], {force:true})
 })
 
 gulp.task('sass', function() {
@@ -36,20 +35,19 @@ gulp.task('sass', function() {
       })
     )
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./build/css/'))
+    .pipe(gulp.dest('./public/css/'))
     .pipe(connect.reload())
 })
 
 gulp.task('watch', function() {
   gulp.watch('./src/scss/**/*.scss', ['sass'])
-  gulp.watch('./src/*.html', ['html'])
+  gulp.watch('./public/*.html', ['html'])
   gulp.watch('./src/js/*.js', ['js'])
 })
 
 gulp.task('html', function() {
   gulp
-    .src('./src/*.html')
-    .pipe(gulp.dest('./build'))
+    .src('./public/*.html')
     .pipe(connect.reload())
 })
 
@@ -61,26 +59,26 @@ gulp.task('js', function() {
       './src/js/*.js',
     ])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./build/js/'))
+    .pipe(gulp.dest('./public/js/'))
     .pipe(connect.reload())
 })
 
-gulp.task('assets', function() {
+gulp.task('images', function() {
   gulp
-    .src('./src/assets/**/*')
+    .src('./src/images/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./build/assets/'))
+    .pipe(gulp.dest('./public/images/'))
 })
 
 gulp.task('fonts', function() {
   gulp
     .src(['./src/fonts/*', 'node_modules/font-awesome/fonts/*'])
-    .pipe(gulp.dest('./build/fonts'))
+    .pipe(gulp.dest('./public/fonts'))
 })
 
 gulp.task('server', function() {
   connect.server({
-    root: 'build',
+    root: 'public',
     livereload: true,
   })
 })
