@@ -111,25 +111,25 @@ $('section')
     {
       name: '2040 Taxi',
       link: 'http://2040.com.ua/',
-      img: '../images/2040.jpg',
+      img: 'images/2040.jpg',
       desc: 'Szybka taksówka towarowa'
     },
     {
       name: 'Slavsport',
       link: 'https://www.slavsport.ru/',
-      img: '../images/slavsport.jpg',
+      img: 'images/slavsport.jpg',
       desc: 'Sklep internetowy dla sportowców'
     },
     {
       name: 'Mamimu',
       link: 'http://mamimu.com.ua/',
-      img: '../images/mamimu.jpg',
+      img: 'images/mamimu.jpg',
       desc: 'Sklep internetowy ubrań dla dzieci'
     },
     {
       name: 'Monolit',
       link: 'http://monolith.in.ua/',
-      img: '../images/monolit.jpg',
+      img: 'images/monolit.jpg',
       desc: 'Literatura dla kierowców'
     },
   ]
