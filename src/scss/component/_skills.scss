@@ -69,6 +69,17 @@
 
   &__item {
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    @include bp($xs) {
+      display: block;
+    }
+
+    @include bp($lg) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__level {
@@ -85,6 +96,18 @@
     }
     .fill {
       background: $bg;
+    }
+  }
+
+  &__name {
+    width: 120px;
+
+    @include bp($xs) {
+      width: auto;
+    }
+
+    @include bp($lg) {
+      width: 120px;
     }
   }
 }

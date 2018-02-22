@@ -21,8 +21,7 @@
   background: linear-gradient(to left, $gradient-button-2, $gradient-button-1);
   border-radius: 30px;
   font-weight: 300;
-  display: block;
-  width: max-content;
+  display: inline-block;
   transition: backgraund 0.3s ease-in-out;
 }
 
