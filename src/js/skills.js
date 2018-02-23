@@ -2,9 +2,9 @@
   const skillsElement = document.getElementById('skills')
   const skills = {
     'Języki programowania': {
-      'HTML/HTML5': 6,
-      'CSS/CSS3': 6,
-      JavaScript: 3,
+      'HTML/HTML5': 7,
+      'CSS/CSS3': 7,
+      JavaScript: 4,
       PHP: 3,
     },
     'Narzędzia': {
