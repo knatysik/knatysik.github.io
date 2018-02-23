@@ -1,5 +1,4 @@
 # knatysik.github.io
 My CV
 
-Look my cv
-https://knatysik.github.io/public/
+Look at my cv [https://knatysik.github.io/public/](https://knatysik.github.io/public/)
