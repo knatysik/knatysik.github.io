@@ -21,7 +21,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
     $.ajax({
       type: "POST",
-      url: "http://localhost/send.php",
+      url: "https://limitless-river-54063.herokuapp.com/send.php",
       data: form_data,
 
       success: function () {

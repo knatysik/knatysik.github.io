@@ -39,6 +39,11 @@
     border-bottom: 1px solid #ccc;
     margin: 15px -30px;
     padding-bottom: 15px;
+    padding: 0 0 30px 30px;
+
+    @include bp($sm) {
+      padding-left: 0;
+    }
   }
 
   &__group {

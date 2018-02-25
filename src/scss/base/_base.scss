@@ -36,6 +36,9 @@ section[class*='l-grid__item'] > div{
 .title-center {
   text-transform: uppercase;
   word-spacing: 16px;
-  text-align: center;
+
+  @include bp($sm) {
+    text-align: center;
+  }
 }
 
