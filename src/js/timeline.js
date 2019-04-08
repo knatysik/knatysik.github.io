@@ -1,4 +1,4 @@
-;(function() {
+; (function () {
   const jobElement = document.getElementById('job')
   const educationElement = document.getElementById('education')
 
@@ -26,6 +26,13 @@
         'Brałam udział w optymalizacji stron internetowych. Zajmowałam się przygotowaniem layoutów. ' +
         ' Pracowałam z takimi CMS jak Diafan, Drupal i inni.',
     },
+    {
+      year: '2016 – teraz',
+      place: 'freelance',
+      position: 'front-end developer',
+      responsibility:
+        '',
+    },
   ]
   const education = [
     {
@@ -42,18 +49,18 @@
   function renderTimeline(data) {
     let result = ''
 
-    data.reverse().forEach(function(item) {
+    data.reverse().forEach(function (item) {
       result += `
           <div class="c-timeline__item">
             <div class="c-timeline__year">${item.year ? item.year : ''}</div>
             <div class="c-timeline__work">
               <h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
               <div class="c-timeline__position">${
-                item.position ? item.position : ''
-              }</div>
+        item.position ? item.position : ''
+        }</div>
               <div class="c-timeline__responsibility">${
-                item.responsibility ? item.responsibility : ''
-              }</div>
+        item.responsibility ? item.responsibility : ''
+        }</div>
             </div>
           </div>`
     })

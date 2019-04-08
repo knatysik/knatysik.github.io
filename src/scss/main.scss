@@ -16,3 +16,27 @@
 @import 'component/timeline';
 @import 'component/portfolio';
 @import 'component/contact';
+
+
+#p_prldr{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  right:0;
+  bottom:0;
+  transform: translate(-50%);
+  background: #A0A9FD;
+  z-index: 30;
+}
+
+.contpre{
+  position: absolute;
+}
+
+#p_prldr .svg_anm {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: #E68FFB;
+  margin: -16px 0 0 -16px;
+}

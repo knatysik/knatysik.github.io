@@ -158,13 +158,14 @@ $('section')
 })()
 
 
-;(function() {
+; (function () {
   const skillsElement = document.getElementById('skills')
   const skills = {
     'Języki programowania': {
       'HTML/HTML5': 7,
       'CSS/CSS3': 7,
       JavaScript: 4,
+      React: 1,
       PHP: 3,
     },
     'Narzędzia': {
@@ -183,10 +184,12 @@ $('section')
     }
   }
 
+  console.log(JSON.stringify(skills, "", 4))
+
   function renderSkillsGroups(skills) {
     let result = ''
     for (let key in skills) {
-      result +=`
+      result += `
         <div class="c-skills__group">
             <div class="c-skills__group-title">${key}</div>
             <div class="c-skills__items">${renderSkills(skills[key])}</div>
@@ -196,7 +199,7 @@ $('section')
     skillsElement.insertAdjacentHTML('beforeend', result)
   }
 
-  function renderSkills (skills) {
+  function renderSkills(skills) {
     let result = ''
     for (let key in skills) {
       result += `
@@ -225,7 +228,7 @@ $('section')
   renderSkillsGroups(skills)
 
 })()
-;(function() {
+; (function () {
   const jobElement = document.getElementById('job')
   const educationElement = document.getElementById('education')
 
@@ -253,6 +256,13 @@ $('section')
         'Brałam udział w optymalizacji stron internetowych. Zajmowałam się przygotowaniem layoutów. ' +
         ' Pracowałam z takimi CMS jak Diafan, Drupal i inni.',
     },
+    {
+      year: '2016 – teraz',
+      place: 'freelance',
+      position: 'front-end developer',
+      responsibility:
+        '',
+    },
   ]
   const education = [
     {
@@ -269,18 +279,18 @@ $('section')
   function renderTimeline(data) {
     let result = ''
 
-    data.reverse().forEach(function(item) {
+    data.reverse().forEach(function (item) {
       result += `
           <div class="c-timeline__item">
             <div class="c-timeline__year">${item.year ? item.year : ''}</div>
             <div class="c-timeline__work">
               <h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
               <div class="c-timeline__position">${
-                item.position ? item.position : ''
-              }</div>
+        item.position ? item.position : ''
+        }</div>
               <div class="c-timeline__responsibility">${
-                item.responsibility ? item.responsibility : ''
-              }</div>
+        item.responsibility ? item.responsibility : ''
+        }</div>
             </div>
           </div>`
     })

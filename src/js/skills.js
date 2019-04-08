@@ -1,10 +1,11 @@
-;(function() {
+; (function () {
   const skillsElement = document.getElementById('skills')
   const skills = {
     'Języki programowania': {
       'HTML/HTML5': 7,
       'CSS/CSS3': 7,
       JavaScript: 4,
+      React: 1,
       PHP: 3,
     },
     'Narzędzia': {
@@ -23,10 +24,12 @@
     }
   }
 
+  console.log(JSON.stringify(skills, "", 4))
+
   function renderSkillsGroups(skills) {
     let result = ''
     for (let key in skills) {
-      result +=`
+      result += `
         <div class="c-skills__group">
             <div class="c-skills__group-title">${key}</div>
             <div class="c-skills__items">${renderSkills(skills[key])}</div>
@@ -36,7 +39,7 @@
     skillsElement.insertAdjacentHTML('beforeend', result)
   }
 
-  function renderSkills (skills) {
+  function renderSkills(skills) {
     let result = ''
     for (let key in skills) {
       result += `
