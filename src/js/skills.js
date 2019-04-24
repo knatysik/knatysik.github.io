@@ -1,7 +1,7 @@
 ; (function () {
   const skillsElement = document.getElementById('skills')
   const skills = {
-    'Języki programowania': {
+    'Technologie': {
       'HTML/HTML5': 7,
       'CSS/CSS3': 7,
       JavaScript: 4,
@@ -45,7 +45,7 @@
       result += `
             <div class="c-skills__item">
                 <div class="c-skills__name">${key}</div>
-                <div class="c-skills__level">${renderLevel(skills[key])}</div>
+                <div class="c-skills__level print-none">${renderLevel(skills[key])}</div>
             </div>`
     }
     return result

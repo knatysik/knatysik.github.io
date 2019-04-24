@@ -1,0 +1,152 @@
+@media print {
+    .print-none {
+        display: none;
+    }
+    h2 { 
+        font-size: 18px;
+        text-transform: uppercase;
+        word-spacing: 16px;
+        margin: 0;
+     }
+     p {
+         margin-bottom: 0;
+         text-align: justify;
+     }
+  }
+
+
+@media print {
+    .l-grid {
+        display: block;
+        padding-bottom: 0;
+
+        &:after {
+            display: block;
+            padding: 15px;
+            font-size: 12px;
+            content: "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji procesu rekrutacji zgodnie z ustawą z dnia 29 sierpnia 1997r. o ochronie danych osobowych (Dz. U. z 2002r. Nr 101, poz. 926, ze zm.)";
+        }
+
+        &__item {
+            &--area-welcome, &--area-education  {
+                width: 30%;
+                float: right;
+            }
+            &--area-about, &--area-skills, &--area-job {
+                width: 70%;
+                float: left;
+            }
+            &--area-job, &--area-portfolio {
+                clear: both;
+            }
+        }
+    }
+    .c-welcome {
+        background: transparent;
+
+        &__wrapper {
+            align-items: baseline;
+            padding: 15px;
+        }
+
+        &__download-cv {
+            display: none;
+        }
+        &__info {
+            text-align: left;
+
+            h1 {
+                color: $black;
+            }
+            .c-contact-link {
+                flex-direction: column;
+            }
+        }
+        a:after {
+            content:attr(data-content);
+            margin-left: 10px;
+            margin-top: -5px;
+        } 
+        &__picture {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }  
+    }
+    .c-about {
+        br {
+            display: none;
+        }
+    }
+    .c-skills {
+        background: none;
+
+        &__title {
+            padding: 0 0 0 30px;
+            border-bottom: none;
+        }
+    
+        &__wrap {
+            display: block;
+        }
+
+        &__group {
+            border-bottom: none; 
+            display: flex;
+            align-items: baseline;
+            padding: 0 30px;
+
+            &-title {
+                font-weight: 600;
+
+                &:after {
+                    content: ":";
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        &__item {
+            display: inline-block;
+
+            &:last-child {
+                .c-skills__name:after {
+                    content: "";
+                }  
+            }
+        }
+
+        &__name {
+            width: auto;
+
+            &:after {
+                content: ",";
+                padding-right: 5px;
+            }
+        }
+
+    }
+    .c-timeline {
+        &__wrap {
+            position: static;
+        }
+        &__item {
+            padding: 0 0 15px;
+
+            &:before {
+                display: none;
+            }
+        }
+        &__work {
+            margin-left: 0;
+            margin-top: 0;
+
+            h3, h5 {
+                display: inline-block;
+                margin: 0 10px 0 0;
+            }
+        }
+        &__responsibility {
+            margin-top: 0;
+        }
+    }
+}

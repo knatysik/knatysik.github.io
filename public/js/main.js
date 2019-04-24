@@ -161,7 +161,7 @@ $('section')
 ; (function () {
   const skillsElement = document.getElementById('skills')
   const skills = {
-    'Języki programowania': {
+    'Technologie': {
       'HTML/HTML5': 7,
       'CSS/CSS3': 7,
       JavaScript: 4,
@@ -205,7 +205,7 @@ $('section')
       result += `
             <div class="c-skills__item">
                 <div class="c-skills__name">${key}</div>
-                <div class="c-skills__level">${renderLevel(skills[key])}</div>
+                <div class="c-skills__level print-none">${renderLevel(skills[key])}</div>
             </div>`
     }
     return result
@@ -282,9 +282,9 @@ $('section')
     data.reverse().forEach(function (item) {
       result += `
           <div class="c-timeline__item">
-            <div class="c-timeline__year">${item.year ? item.year : ''}</div>
+            <div class="c-timeline__year print-none">${item.year ? item.year : ''}</div>
             <div class="c-timeline__work">
-              <h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
+              <h5>${item.year}</h5><h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
               <div class="c-timeline__position">${
         item.position ? item.position : ''
         }</div>

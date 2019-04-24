@@ -52,9 +52,9 @@
     data.reverse().forEach(function (item) {
       result += `
           <div class="c-timeline__item">
-            <div class="c-timeline__year">${item.year ? item.year : ''}</div>
+            <div class="c-timeline__year print-none">${item.year ? item.year : ''}</div>
             <div class="c-timeline__work">
-              <h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
+              <h5>${item.year}</h5><h3 class="c-timeline__place">${item.place ? item.place : ''}</h3>
               <div class="c-timeline__position">${
         item.position ? item.position : ''
         }</div>

@@ -109,6 +109,10 @@ $width-year: 130px;
     margin-left: $triangle-width;
     margin-top: 15px;
 
+    h5 {
+      display: none;
+    }
+
     @include bp($sm) {
       padding-left: 50px;
       margin-top: -15px;

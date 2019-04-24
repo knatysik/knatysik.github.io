@@ -17,6 +17,8 @@
 @import 'component/portfolio';
 @import 'component/contact';
 
+@import 'base/print';
+
 
 #p_prldr{
   position: fixed;
@@ -40,3 +42,4 @@
   background: #E68FFB;
   margin: -16px 0 0 -16px;
 }
+
