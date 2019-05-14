@@ -1,4 +1,4 @@
-;(function() {
+; (function () {
   const portfolioElement = document.getElementById('portfolio')
 
   const myWorks = [
@@ -15,10 +15,10 @@
       desc: 'Sklep internetowy dla sportowców'
     },
     {
-      name: 'Mamimu',
-      link: 'http://mamimu.com.ua/',
-      img: 'images/mamimu.jpg',
-      desc: 'Sklep internetowy ubrań dla dzieci'
+      name: 'AH Amidora Horsemenship',
+      link: 'https://ah-instruktor.pl/',
+      img: 'images/joga-konie.jpg',
+      desc: 'Joga i konie'
     },
     {
       name: 'Monolit',
@@ -31,8 +31,8 @@
   function renderPortfolio(portfolio) {
     let result = ''
 
-      portfolio.forEach(function(item) {
-        result += `
+    portfolio.forEach(function (item) {
+      result += `
             <div class="c-portfolio__item" style='background-image: url("${item.img}")'>
                 <div class="c-portfolio__info">
                   <div class="c-portfolio__text">
@@ -44,7 +44,7 @@
                   </a>
                 </div>
             </div>`
-        })
+    })
     portfolioElement.insertAdjacentHTML('beforeend', result)
   }
 

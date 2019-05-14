@@ -6,7 +6,7 @@
         font-size: 18px;
         text-transform: uppercase;
         word-spacing: 16px;
-        margin: 0;
+        margin: 0 0 15px;
      }
      p {
          margin-bottom: 0;
@@ -46,7 +46,7 @@
 
         &__wrapper {
             align-items: baseline;
-            padding: 15px;
+            padding: 15px 15px 0;
         }
 
         &__download-cv {
@@ -54,6 +54,7 @@
         }
         &__info {
             text-align: left;
+            margin-top: 0;
 
             h1 {
                 color: $black;
@@ -73,12 +74,14 @@
         }  
     }
     .c-about {
+        padding-bottom: 0px !important;
         br {
             display: none;
         }
     }
     .c-skills {
         background: none;
+        padding: 5px 30px !important;
 
         &__title {
             padding: 0 0 0 30px;
@@ -92,6 +95,7 @@
         &__group {
             border-bottom: none; 
             display: flex;
+            flex-direction: column;
             align-items: baseline;
             padding: 0 30px;
 
@@ -126,13 +130,14 @@
 
     }
     .c-timeline {
+        padding-top: 5px !important;
         &__wrap {
             position: static;
         }
         &__item {
             padding: 0 0 15px;
 
-            &:before {
+            &:before, &:after {
                 display: none;
             }
         }
