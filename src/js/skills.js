@@ -17,7 +17,7 @@
       'Adobe Photoshop': 4,
     },
     'Umiejętności komunikacyjne': {
-      Polski: 5,
+      Polski: 6,
       Angielski: 3,
       Ukraiński: 8,
       Rosyjski: 8,

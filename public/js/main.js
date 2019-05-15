@@ -177,7 +177,7 @@ $('section')
       'Adobe Photoshop': 4,
     },
     'Umiejętności komunikacyjne': {
-      Polski: 5,
+      Polski: 6,
       Angielski: 3,
       Ukraiński: 8,
       Rosyjski: 8,
@@ -238,23 +238,23 @@ $('section')
       place: 'Webimperia',
       position: 'front - end developer',
       responsibility:
-        'Na tym stanowisku byłam odpowiedzialna za przygotowanie warstwy frontendowej (HTML/CSS/JavaScript) dla stron internetowych.' +
-        ' Pracowałam z takimi popularnymi CMS jak WordPress, OpenCart, Bitrix, Shop-script.',
+        'Przygotowanie warstwy frontendowej (HTML/CSS/JavaScript) dla stron internetowych.' +
+        ' Praca z takimi popularnymi CMS jak WordPress, OpenCart, Bitrix, Shop-script.',
     },
     {
       year: 'kwi 2014 – lip 2014',
       place: 'WebRussia',
       position: 'front - end developer',
       responsibility:
-        'Głównym zadaniem było tworzenie szablonów do Wordpress i OpenCart na podstawie makiet graficznych.',
+        'Tworzenie szablonów do Wordpress i OpenCart na podstawie makiet graficznych.',
     },
     {
       year: 'lip 2014 – sty 2015',
       place: 'PromoPage',
       position: 'webmaster',
       responsibility:
-        'Brałam udział w optymalizacji stron internetowych. Zajmowałam się przygotowaniem layoutów. ' +
-        ' Pracowałam z takimi CMS jak Diafan, Drupal i inni.',
+        'Optymalizacja stron internetowych. Przygotowaniem layoutów. ' +
+        ' Praca z takimi CMS jak Diafan, Drupal i inni.',
     },
     {
       year: '2016 – teraz',
@@ -266,13 +266,17 @@ $('section')
   ]
   const education = [
     {
-      year: 2006,
-      place: 'Ukończyłam szkołę',
+      year: 2004,
+      place: 'Ukończenie szkoły podstawowej',
+    },
+    {
+      year: '2004 - 2007',
+      place: 'Ukończenie szkoły ponadgimnazjalnej rezerwy olimpijskiej',
     },
     {
       year: '2007 - 2013',
-      place: 'National Technical University "Kharkiv Polytechnic Institute"',
-      position: "Master's degree, social informatics",
+      place: 'Ukończenie studiów magisterskich, informatyka społeczna',
+      position: 'National Technical University "Kharkiv Polytechnic Institute"',
     },
   ]
 
