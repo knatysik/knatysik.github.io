@@ -1,0 +1,27 @@
+{
+  "place": "cv",
+  "version": "1.0.0",
+  "description": "My CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NatMihKr",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "waypoint": "^0.2.8"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.0.0",
+    "gulp-connect": "^5.2.0",
+    "gulp-css-rebase-urls": "0.0.5",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
